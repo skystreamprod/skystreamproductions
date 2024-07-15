@@ -110,7 +110,7 @@ body {
 
 .block {
     background-color: rgba(242,243,245,255);
-    height: 500px;
+    height: auto;
     display: grid;
     grid-template-columns: 5% 40% 5% 5% 40% 5%;
     grid-template-rows: 10% 80% 10%;
@@ -158,6 +158,11 @@ body {
     font-size: x-large;
 }
 
+#textblock {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
 .main_image1 {
     grid-column: 6/5;
     grid-row: 2/5;
@@ -170,6 +175,11 @@ body {
     grid-row: 2/5;
     width: 100%;
     height: auto;
+}
+
+#main_image {
+    padding-top: 7%;
+    padding-bottom: 7%;
 }
 
 .footer {
