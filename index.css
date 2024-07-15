@@ -1,4 +1,4 @@
-    body {
+body {
     background-color: rgba(242,243,245,255);
     margin: 0;
     padding: 0;
@@ -192,7 +192,7 @@
 }
 
 .Socials {
-    margin-top: 8%;
+    margin-top: 0%;
     margin-left: 3%;
 }
 
@@ -207,4 +207,13 @@
     margin: 0;
     padding: -1;
     display: block;
+}
+
+.contact_images img {
+    width: 4%;
+}
+
+.Socials_images img {
+    width: 4%;
+    margin-left: 4px;
 }
