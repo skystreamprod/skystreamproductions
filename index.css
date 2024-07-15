@@ -109,6 +109,7 @@ body {
 }
 
 .block {
+    padding-bottom: 5%;
     background-color: rgba(242,243,245,255);
     height: auto;
     display: grid;
