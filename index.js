@@ -1,5 +1,5 @@
 var prevScrollpos = window.pageYOffset;
-        var hidePoint = 500;
+        var hidePoint = 600;
         
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
@@ -17,7 +17,7 @@ var prevScrollpos = window.pageYOffset;
             prevScrollpos = currentScrollPos;
         
             var video = document.querySelector('.main_video');
-            var parallaxSpeed = 1;
+            var parallaxSpeed = 0.5;
             var offset = window.pageYOffset * parallaxSpeed;
             video.style.transform = 'translate3d(-50%, ' + offset + 'px, 0)';
         }
