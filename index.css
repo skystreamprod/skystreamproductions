@@ -119,9 +119,7 @@ body {
 
 #block1 {
     border-style: hidden;
-    border-top-style: solid;
-    border-top-width: 10px;
-    border-top-color: #002b45;
+    border-top: #002b45 solid 10px;
     background-color: rgba(242,243,245,255);
 }
 
