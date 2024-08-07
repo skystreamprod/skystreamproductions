@@ -142,8 +142,29 @@ body {
     display: block;
 }
 
-.cta {
+.onze_missie {
     background-color: #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.onze_missie h1 {
+    margin: 0%;
+    padding-top: 1%;
+}
+
+.onze_missie img {
+    margin-top: 0%;
+}
+
+.text_onze_missie {
+    width: 70%;
+}
+
+.cta {
+    background-color: rgba(242,243,245,255);
     display: flex;
     justify-content: center;
     flex-direction: column;
