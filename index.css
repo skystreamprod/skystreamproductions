@@ -189,7 +189,7 @@ body {
 }
 
 .cta {
-    background-color: #d1d1d1;
+    background-color: rgba(242,243,245,255);
     display: flex;
     justify-content: center;
     flex-direction: column;
