@@ -8,6 +8,11 @@
     border: 5px solid rgb(177, 34, 34);
 }
 
+.GoldApple {
+    background-color: yellow;
+    border: 5px solid rgb(219, 187, 4);
+}
+
 body {
     background-color: aliceblue;
     height: 2000px;
@@ -20,8 +25,8 @@ body {
 table {
     background-color: lightgrey;
     border: 3px solid gray;
-    width: 700px;
-    height: 700px;
+    width: 38%;
+    aspect-ratio: 1/1;
     margin: 0%;
     margin-bottom: 20px;
     border-spacing: 0cm;

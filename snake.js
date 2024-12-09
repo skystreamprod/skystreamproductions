@@ -1,10 +1,16 @@
 snakeHeadPos = ["11", "02"];
 snakePos = ["11", "01", "11", "02"];
-length = 3;
+length = 4;
 richting = 3;
+score = 0;
 stop = true;
 inputGiven = 0;
 eerstekeer = true;
+snelheid = 300;
+apple = "apple";
+
+let Gapple = new Audio('pickupCoin.mp3');
+let Napple = new Audio('pickupCoin(1).mp3');
 
 document.addEventListener('keydown', function(event) {
     if (inputGiven == 0){
@@ -17,6 +23,8 @@ document.addEventListener('keydown', function(event) {
 });
 
 function start() {
+    scoretext = "Score: ";
+    document.getElementById("scoreText").textContent=scoretext;
     spauwnApple();
 }
 
@@ -26,6 +34,7 @@ function getRandomInt(max) {
 
 //spauwn appel
 function spauwnApple() {
+    if (getRandomInt(16) == 1) {apple = "GoldApple";} else {apple = "apple";}
     appleYPos = getRandomInt(19) + 1;
     appleXPos = getRandomInt(19) + 1;
     if (appleYPos < 10) {
@@ -48,7 +57,7 @@ function spauwnApple() {
         }
     }
 
-    document.getElementById(appleYPos + appleXPos).setAttribute("class", "apple");
+    document.getElementById(appleYPos + appleXPos).setAttribute("class", apple);
     if (eerstekeer == true) {
         eerstekeer = false;
         stapje();
@@ -58,7 +67,14 @@ function spauwnApple() {
 function stapje() {
     //check voor appel
     if (snakeHeadPos[0] === appleYPos && snakeHeadPos[1] === appleXPos) {
+        if (apple == "GoldApple") {
+            Gapple.play();
+            length = length + 2;
+        } else {Napple.play();}
         length++;
+        score = length - 4;
+        scoretext = "Score: " + score;
+        document.getElementById("scoreText").textContent=scoretext;
         spauwnApple();
     }
 
@@ -96,11 +112,6 @@ function stapje() {
         snakeHeadPos[0] = snakeHeadPos[0].toString()
     }
     inputGiven = 0;
-    //check voor muur
-    if (snakeHeadPos[0] > 20 || snakeHeadPos[1] < 1 || snakeHeadPos[1] > 20 || snakeHeadPos[0] < 1) {
-        stop = false;
-        setTimeout(reset, 2000);
-    }
 
     //check voor botsing
     colCheck = snakePos.length / 2;
@@ -108,9 +119,27 @@ function stapje() {
         const segmentX = snakePos[i * 2];
         const segmentY = snakePos[i * 2 + 1];
         if (snakeHeadPos[0] === segmentX && snakeHeadPos[1] === segmentY) {
-            stop = false;
+            stop = false;   
             setTimeout(reset, 2000);
         }
+    }
+
+    //check voor muur
+    if (snakeHeadPos[0] == "21") {
+        snakeHeadPos[0] = "01";
+        richting = 1;
+    }
+    if (snakeHeadPos[0] == "00") {
+        snakeHeadPos[0] = "20";
+        richting = 2;
+    }
+    if (snakeHeadPos[1] == "21") {
+        snakeHeadPos[1] = "01";
+        richting = 3;
+    }
+    if (snakeHeadPos[1] == "00") {
+        snakeHeadPos[1] = "20";
+        richting = 0;
     }
 
     //beweeg
@@ -120,8 +149,16 @@ function stapje() {
         document.getElementById(snakePos[0] + snakePos[1]).setAttribute("class", "");
         snakePos = snakePos.slice(2);
     }
+    console.log(snakeHeadPos);
         document.getElementById(snakeHeadPos[0] + snakeHeadPos[1]).setAttribute("class", "on"); 
-        setTimeout(stapje, 300);
+        if (score > 3) {snelheid = 290;}
+        if (score > 8) {snelheid = 280;}
+        if (score > 15) {snelheid = 265;}
+        if (score > 25) {snelheid = 240;}
+        if (score > 40) {snelheid = 200;}
+        if (score > 60) {snelheid = 180;}
+        if (score > 90) {snelheid = 150;}
+        setTimeout(stapje, snelheid);
     }
 }   
 
@@ -137,5 +174,7 @@ function reset() {
     richting = 3;
     stop = true;
     eerstekeer = true;
+    score = 0;
+    apple = "apple";
     spauwnApple();
 }
