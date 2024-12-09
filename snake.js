@@ -23,7 +23,7 @@ document.addEventListener('keydown', function(event) {
 });
 
 function start() {
-    scoretext = "Score: ";
+    scoretext = "Score: " + score;
     document.getElementById("scoreText").textContent=scoretext;
     spauwnApple();
 }
@@ -175,6 +175,7 @@ function reset() {
     stop = true;
     eerstekeer = true;
     score = 0;
+    document.getElementById("scoreText").textContent=scoretext;
     apple = "apple";
     spauwnApple();
 }
