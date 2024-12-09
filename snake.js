@@ -1,6 +1,6 @@
 snakeHeadPos = ["11", "02"];
 snakePos = ["11", "01", "11", "02"];
-length = 300;
+length = 3;
 richting = 3;
 stop = true;
 inputGiven = 0;
