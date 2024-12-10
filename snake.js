@@ -7,12 +7,16 @@ stop = true;
 eerstekeer = true;
 snelheid = 300;
 apple = "apple";
+cooldown = 0;
 
 let Gapple = new Audio('pickupCoin.mp3');
 let Napple = new Audio('pickupCoin(1).mp3');
 let dood = new Audio('hitHurt.mp3');
 
 document.addEventListener('keydown', function(event) {
+    if (event.key == " " && cooldown <= 0) {
+        if (stop == true) {stop = false;} else {stop = true; cooldown = 50; goFurther();}
+    }
     if (inputGiven == 0){
         if (event.key == "a" && richting != 3 || event.key == "A" && richting != 3 || event.key == "ArrowLeft" && richting != 3) {richting = 0;}
         if (event.key == "s" && richting != 2 || event.key == "S" && richting != 2 || event.key == "ArrowDown" && richting != 2) {richting = 1;}
@@ -146,14 +150,17 @@ function stapje() {
         richting = 0;
     }
 
-    //beweeg
+    goFurther();
+}   
+
+//beweeg
+function goFurther() {
     if (stop == true) {
         snakePos.push(snakeHeadPos[0], snakeHeadPos[1]);
         if (length ==  snakePos.length/2) {
         document.getElementById(snakePos[0] + snakePos[1]).setAttribute("class", "");
         snakePos = snakePos.slice(2);
     }
-    console.log(snakeHeadPos);
         document.getElementById(snakeHeadPos[0] + snakeHeadPos[1]).setAttribute("class", "on"); 
         if (score > 3) {snelheid = 290;}
         if (score > 8) {snelheid = 280;}
@@ -162,9 +169,18 @@ function stapje() {
         if (score > 40) {snelheid = 200;}
         if (score > 60) {snelheid = 180;}
         if (score > 90) {snelheid = 150;}
+        cooldown--;
+        console.log(cooldown);
+        if (cooldown > 0) {
+            countdownText = "Pause countdown on cooldown!!!";
+            console.log(countdownText);
+            document.getElementById("countdown").textContent=countdownText;
+        } else {
+            document.getElementById("countdown").textContent=" ";
+        }
         setTimeout(stapje, snelheid);
     }
-}   
+}
 
 function reset() {
     while (snakePos.length > 0){
@@ -181,5 +197,6 @@ function reset() {
     score = 0;
     document.getElementById("scoreText").textContent=scoretext;
     apple = "apple";
+    cooldown = 0;
     spauwnApple();
 }
