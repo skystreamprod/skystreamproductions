@@ -4,18 +4,16 @@ length = 4;
 richting = 3;
 score = 0;
 stop = true;
-inputGiven = 0;
 eerstekeer = true;
 snelheid = 300;
 apple = "apple";
 
 let Gapple = new Audio('pickupCoin.mp3');
 let Napple = new Audio('pickupCoin(1).mp3');
-let dood = new Audio('hub-intro-sound.mp3');
+let dood = new Audio('hitHurt.mp3');
 
 document.addEventListener('keydown', function(event) {
     if (inputGiven == 0){
-        console.log(event.key);
         if (event.key == "a" && richting != 3 || event.key == "A" && richting != 3 || event.key == "ArrowLeft" && richting != 3) {richting = 0;}
         if (event.key == "s" && richting != 2 || event.key == "S" && richting != 2 || event.key == "ArrowDown" && richting != 2) {richting = 1;}
         if (event.key == "w" && richting != 1 || event.key == "W" && richting != 1 || event.key == "ArrowUp" && richting != 1) {richting = 2;}
