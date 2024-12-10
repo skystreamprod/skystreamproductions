@@ -1,0 +1,39 @@
+.on {
+    background-color: greenyellow;
+    border: 5px solid rgb(157, 230, 84);
+}
+
+.apple {
+    background-color: rgb(255, 42, 42);
+    border: 5px solid rgb(177, 34, 34);
+}
+
+.GoldApple {
+    background-color: yellow;
+    border: 5px solid rgb(219, 187, 4);
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; height: 100%; overflow: hidden
+}
+
+table {
+    margin-top: 2%;
+    background-color: lightgrey;
+    border: 3px solid gray;
+    width: 38%;
+    aspect-ratio: 1/1;
+    margin-bottom: 20px;
+    border-spacing: 0cm;
+}
+
+tr, td {
+    width: 5%;
+    height: 5%;
+    padding: 0%;
+    margin: 0%;
+}
