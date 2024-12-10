@@ -15,19 +15,18 @@
 
 body {
     background-color: aliceblue;
-    height: 2000px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0; height: 100%; overflow: hidden
 }
 
 table {
+    margin-top: 2%;
     background-color: lightgrey;
     border: 3px solid gray;
     width: 38%;
     aspect-ratio: 1/1;
-    margin: 0%;
     margin-bottom: 20px;
     border-spacing: 0cm;
 }

@@ -15,10 +15,11 @@ let dood = new Audio('hub-intro-sound.mp3');
 
 document.addEventListener('keydown', function(event) {
     if (inputGiven == 0){
-        if (event.key == "a" && richting != 3 || event.key == "A" && richting != 3) {richting = 0;}
-        if (event.key == "s" && richting != 2 || event.key == "S" && richting != 2) {richting = 1;}
-        if (event.key == "w" && richting != 1 || event.key == "W" && richting != 1) {richting = 2;}
-        if (event.key == "d" && richting != 0 || event.key == "D" && richting != 0) {richting = 3;}
+        console.log(event.key);
+        if (event.key == "a" && richting != 3 || event.key == "A" && richting != 3 || event.key == "ArrowLeft" && richting != 3) {richting = 0;}
+        if (event.key == "s" && richting != 2 || event.key == "S" && richting != 2 || event.key == "ArrowDown" && richting != 2) {richting = 1;}
+        if (event.key == "w" && richting != 1 || event.key == "W" && richting != 1 || event.key == "ArrowUp" && richting != 1) {richting = 2;}
+        if (event.key == "d" && richting != 0 || event.key == "D" && richting != 0 || event.key == "ArrowRight" && richting != 0) {richting = 3;}
         inputGiven = 1;
     }
 });
