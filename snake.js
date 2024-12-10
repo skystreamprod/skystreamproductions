@@ -34,7 +34,7 @@ function getRandomInt(max) {
 
 //spauwn appel
 function spauwnApple() {
-    if (getRandomInt(16) == 1) {apple = "GoldApple";} else {apple = "apple";}
+    if (getRandomInt(16) == 1) {apple = "GoldApple";} else if (getRandomInt(43) == 1) {apple = "RGBapple";} else {apple = "apple";}
     appleYPos = getRandomInt(19) + 1;
     appleXPos = getRandomInt(19) + 1;
     if (appleYPos < 10) {
@@ -70,7 +70,10 @@ function stapje() {
         if (apple == "GoldApple") {
             Gapple.play();
             length = length + 2;
-        } else {Napple.play();}
+        } else if (apple == "RGBapple") {
+            Gapple.play();
+            length = length + 9;
+        }  else {Napple.play();}
         length++;
         score = length - 4;
         scoretext = "Score: " + score;
