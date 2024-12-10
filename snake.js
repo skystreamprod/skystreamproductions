@@ -11,6 +11,7 @@ apple = "apple";
 
 let Gapple = new Audio('pickupCoin.mp3');
 let Napple = new Audio('pickupCoin(1).mp3');
+let dood = new Audio('hub-intro-sound.mp3');
 
 document.addEventListener('keydown', function(event) {
     if (inputGiven == 0){
@@ -120,6 +121,7 @@ function stapje() {
         const segmentY = snakePos[i * 2 + 1];
         if (snakeHeadPos[0] === segmentX && snakeHeadPos[1] === segmentY) {
             stop = false;   
+            dood.play();
             setTimeout(reset, 2000);
         }
     }
