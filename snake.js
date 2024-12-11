@@ -38,7 +38,7 @@ function getRandomInt(max) {
 
 //spauwn appel
 function spauwnApple() {
-    if (getRandomInt(16) == 1) {apple = "GoldApple";} else if (getRandomInt(60) == 1) {apple = "RGBapple";} else {apple = "apple";}
+    if (getRandomInt(16) == 1) {apple = "GoldApple";} else if (getRandomInt(60) == 1) {apple = "DiamondApple";} else if (getRandomInt(200) == 1) {apple = "RGBapple";} else {apple = "apple";}
     appleYPos = getRandomInt(19) + 1;
     appleXPos = getRandomInt(19) + 1;
     if (appleYPos < 10) {
@@ -74,10 +74,13 @@ function stapje() {
         if (apple == "GoldApple") {
             Gapple.play();
             length = length + 2;
-        } else if (apple == "RGBapple") {
+        } else if (apple == "DiamondApple") {
             Gapple.play();
             length = length + 9;
-        }  else {Napple.play();}
+        } else if (apple == "RGBapple") {
+            Gapple.play();
+            length = length + 19;
+        } else {Napple.play();}
         length++;
         score = length - 4;
         scoretext = "Score: " + score;
@@ -199,5 +202,6 @@ function reset() {
     document.getElementById("scoreText").textContent=scoretext;
     apple = "apple";
     cooldown = 0;
+    snelheid = 300;
     spauwnApple();
 }
