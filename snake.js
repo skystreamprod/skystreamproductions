@@ -38,7 +38,7 @@ function getRandomInt(max) {
 
 //spauwn appel
 function spauwnApple() {
-    if (getRandomInt(16) == 1) {apple = "GoldApple";} else if (getRandomInt(43) == 1) {apple = "RGBapple";} else {apple = "apple";}
+    if (getRandomInt(16) == 1) {apple = "GoldApple";} else if (getRandomInt(60) == 1) {apple = "RGBapple";} else {apple = "apple";}
     appleYPos = getRandomInt(19) + 1;
     appleXPos = getRandomInt(19) + 1;
     if (appleYPos < 10) {
@@ -159,8 +159,9 @@ function goFurther() {
         snakePos.push(snakeHeadPos[0], snakeHeadPos[1]);
         if (length ==  snakePos.length/2) {
         document.getElementById(snakePos[0] + snakePos[1]).setAttribute("class", "");
-        snakePos = snakePos.slice(2);
-    }
+        snakePos = snakePos.slice(2); 
+        }
+
         document.getElementById(snakeHeadPos[0] + snakeHeadPos[1]).setAttribute("class", "on"); 
         if (score > 3) {snelheid = 290;}
         if (score > 8) {snelheid = 280;}
