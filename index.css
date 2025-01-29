@@ -189,7 +189,7 @@ body {
 }
 
 .cta {
-    background-color: rgba(242,243,245,255);
+    background-color: #d1d1d1;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -206,7 +206,7 @@ body {
 }
 
 .cta button {
-    width: 120%;
+    width: 10%;
     height: 30px;
     color: #ffffff;
     background-color: #002b45;
