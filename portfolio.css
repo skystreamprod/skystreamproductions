@@ -91,6 +91,38 @@ body {
     background-color: #007bff;
 }
 
+.main {
+    margin-top: 120px;
+    height: 1000px;
+}
+
+.textContainer {
+    border-bottom: #002b45 dotted 4px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContainer h1 {
+    font-size: 80px;
+    margin: 0%;
+}
+
+.textContainer p {
+    font-size: 25px;
+    width: 60%;
+    text-align: center;
+}
+
+.ganzenbeek_vid {
+    width: 94%;
+    margin: 40px;
+    height: 65%;
+    border-radius: 20px;
+}
+
 .footer {
     background-color: #002b45;
     height: 300px;

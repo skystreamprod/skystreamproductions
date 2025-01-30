@@ -1,5 +1,5 @@
 var prevScrollpos = window.pageYOffset;
-        var hidePoint = 10;
+        var hidePoint = 100;
         
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
