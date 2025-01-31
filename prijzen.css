@@ -95,7 +95,7 @@ body {
 
 .intro {
     padding-left: 20px;
-    background-color: #002b45;
+    background-color: #d1d1d1;
     width: 100%;
     height: 500px;
     margin-top: 120px;
@@ -103,7 +103,7 @@ body {
     justify-content: space-between;
     z-index: 0;
     overflow: hidden;
-    color: rgba(242,243,245,255);
+    color: #002b45;
 }
 
 .intro h1 {
@@ -111,7 +111,8 @@ body {
 }
 
 .intro p {
-    font-size: 20px;
+    font-size: 35px;
+    font-weight: 50;
 }
 
 .intro img {
@@ -120,6 +121,24 @@ body {
     margin-top: 20px;
     overflow: hidden;
     height: 620px;
+}
+
+.text {
+    width: 45%;
+}
+
+.pakkettenTopText {
+    width: 95%;
+    margin-left: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #002b45 dotted 3px;
+}
+
+.pakkettenTopText h1 {
+    color: #002b45;
+    text-align: center;
 }
 
 .pakketten {
@@ -138,20 +157,23 @@ body {
 }
 
 .pakketTop {
-    width: 100%;
-    background-color: #002b45;
+    width: 95%;
     height: 60px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    margin-left: 2.5%;
+    border-bottom: #002b45 solid 2.5px;
 }
 
 .pakketTop p {
-    color: rgba(242,243,245,255);
+    color: #002b45;
     font-size: 20px;
     font-weight: 600;
-    padding-left: 20px;
+    padding-left: 10px;
+}
+.clouds-transition {
+    width: 100%;
+    margin: 0;
+    padding: -1;
+    display: block;
 }
 
 .footer {

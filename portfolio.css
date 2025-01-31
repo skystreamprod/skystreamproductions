@@ -95,7 +95,7 @@ body {
 
 .main {
     margin-top: 120px;
-    height: 1000px;
+    height: 1800px;
 }
 
 .textContainer {
@@ -123,6 +123,40 @@ body {
     margin: 40px;
     height: 65%;
     border-radius: 20px;
+}
+
+.clouds-transition {
+    width: 100%;
+    margin: 0;
+    margin-top: 3%;
+    padding: -1;
+    display: block;
+}   
+
+.cta {
+    background-color: #d1d1d1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.cta h1 {
+    color: #002b45;
+}
+
+.cta h3 {
+    color: #002b45;
+}
+
+.cta button {
+    width: 10%;
+    height: 30px;
+    color: #ffffff;
+    background-color: #002b45;
+    border-radius: 20px;
+    font-size: medium;
 }
 
 .footer {
