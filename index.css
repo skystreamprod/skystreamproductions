@@ -191,7 +191,9 @@ body {
 }
 
 .cta {
-    background-color: #d1d1d1;
+    border-style: hidden;
+    border-top: #002b45 solid 10px;
+    background-color: rgba(242,243,245,255);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -201,6 +203,7 @@ body {
 
 .cta h1 {
     color: #002b45;
+    text-align: center;
 }
 
 .cta h3 {
